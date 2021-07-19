@@ -1,10 +1,12 @@
 # How to deploy a dotnet gRPC service on AWS ECS Fargate
 
-This repository contains a couple of scenarios showing you how you can deploy a .NET gRPC service into AWS ECS Fargate.
+This repository contains a couple of scenarios about how you can deploy a .NET gRPC service into AWS ECS Fargate.
+
+This repository is tied to the post  "How to deploy a dotnet gRPC service on AWS ECS Fargate" from my blog. You can read it here //TODO
 
 # Scenario 1
 
-We have built a .NET5 gRPC service and we want to deploy it into AWS ECS Fargate.
+- We have built a .NET5 gRPC service and we want to deploy it into AWS ECS Fargate.
 
 The source code can be found in the ``/src/StandAloneGrpcService`` folder. The app has the following features already built-in :
 
@@ -14,7 +16,7 @@ The source code can be found in the ``/src/StandAloneGrpcService`` folder. The a
 
 # Scenario 2
 
-We have an existing WebAPI and we want to add a gRPC service endpoint. Afterwards we want to deploy it into AWS ECS Fargate.   
+- We have an existing WebAPI and we want to add a gRPC service endpoint. Afterwards we want to deploy it into AWS ECS Fargate.   
 
 The source code can be found in the ``/src/WebApiWithGrpcService`` folder. The app has the following features already built-in:
 
