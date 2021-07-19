@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option csharp_namespace = "Server.Grpc";
+
+package reply;
+
+service Replyer {
+  rpc SaySomething (ReplierRequest) returns (ReplierReply);
+}
+
+message ReplierRequest {
+  string message = 1;
+}
+
+message ReplierReply {
+  string message = 1;
+}

@@ -1,0 +1,20 @@
+﻿trigger: none
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- script: |
+    echo Starting docker build
+    cd $(System.DefaultWorkingDirectory)/src/WebApiWithGrpcService/Server.WebApi
+    docker build -t server.apiwithgrpc:$(Build.BuildId) -t server.apiwithgrpc:latest -f Dockerfile .
+
+- task: ECRPushImage@1
+  displayName: Push to AWS ECR
+  inputs:
+    awsCredentials: 'AWS ECR'
+    regionName: 'eu-west-1'
+    imageSource: 'imagename'
+    sourceImageName: 'server.apiwithgrpc'
+    repositoryName: 'server.apiwithgrpc'
+    autoCreateRepository: true

@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+option csharp_namespace = "Server.Grpc";
+
+package weather;
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
+
+
+service Weather {
+  rpc GetForecast (google.protobuf.Empty) returns (ForecastListReply);
+}
+
+message ForecastListReply
+{
+   repeated ForecastReply items = 1;
+}
+
+message ForecastReply {
+   google.protobuf.Timestamp time = 1;
+   int32 temperature = 2; 
+   string summary = 3;
+}
