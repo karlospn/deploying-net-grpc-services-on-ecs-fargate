@@ -36,10 +36,10 @@ The ``/cdk`` folder contains everything necessary to ran both scenarios. It crea
 
 This CDK needs that a few resources are created beforehand. The resources that needs to be created beforehand are the following ones:
 
-- ``VpcId``: The Id of the VPC where all the resources is going to be placed.
+- ``VpcId``: The Id of the VPC where all the resources are going to be placed.
 - ``SubnetId``: The Id of the subnet where the ECS Fargate Service is going to be placed.
-- ``EcrGrpcServiceArn``: The Scenario 1 ECR repository Arn. The app repository contains an Azure DevOps YAML pipeline that pushes it into an ECR repository.
-- ``EcrGrpcWebApiArn``: The Scenario 2 ECR repository Arn. The app repository contains an Azure DevOps YAML pipeline that pushes it into an ECR repository.
+- ``EcrGrpcServiceArn``: The Scenario 1 ECR repository Arn. The app needs to be pushed on this ECR repository before deploying the CDK.
+- ``EcrGrpcWebApiArn``: The Scenario 2 ECR repository Arn. The app needs to be pushed on this ECR repository before deploying the CDK.
 - ``SecretManagerHttpsCertificateArn``: A secret manager arn pointing to a certificate that is going to be used for the ALB Https Listener.
   
 Every parameter the CDK needs is encapsulated in the ``GrpcStackProps`` DTO. Here's a code snippet of the ``Program.cs``:
