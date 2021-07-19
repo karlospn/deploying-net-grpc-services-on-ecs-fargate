@@ -26,7 +26,7 @@ namespace CdkGrpcStack
                     StackName = "grpc-stack",
                     Env = new Amazon.CDK.Environment
                     {
-                        Account = "934045942927",
+                        Account = "718694466383",
                         Region = "eu-west-1",
                     }
                 }

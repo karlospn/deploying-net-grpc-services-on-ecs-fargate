@@ -12,7 +12,7 @@ steps:
 - task: ECRPushImage@1
   displayName: Push to AWS ECR
   inputs:
-    awsCredentials: 'AWS ECR'
+    awsCredentials: 'aws-ecr-dev'
     regionName: 'eu-west-1'
     imageSource: 'imagename'
     sourceImageName: 'server.grpc'
