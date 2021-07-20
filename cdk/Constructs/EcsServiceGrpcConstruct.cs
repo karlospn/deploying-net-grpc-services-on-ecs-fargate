@@ -130,15 +130,6 @@ namespace CdkGrpcStack.Constructs
                     Targets = new IApplicationLoadBalancerTarget[] { service }
                 });
 
-            //Path routing using packagename.**
-            props.AlbListener.AddTargetGroups(
-                "listener-svc-greet",
-                new AddApplicationTargetGroupsProps
-                {
-                    TargetGroups = new IApplicationTargetGroup[] { TargetGroup },
-                    Conditions = new[] { ListenerCondition.PathPatterns(new[] { $"/greet.*" })},
-                    Priority = new Random().Next(1, 1000)
-                });
 
             //Path routing using packagename.servicename/methodname*
             props.AlbListener.AddTargetGroups(

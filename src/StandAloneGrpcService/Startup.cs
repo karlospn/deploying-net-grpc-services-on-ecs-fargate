@@ -29,7 +29,6 @@ namespace Server.Grpc
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGrpcService<GreeterService>();
                 endpoints.MapGrpcService<ReplierService>();
                 endpoints.MapGrpcService<WeatherForecastService>();
                 endpoints.MapGrpcService<GrpcHealthCheckService>();
