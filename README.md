@@ -2,7 +2,8 @@
 
 This repository contains a couple of scenarios about how you can deploy a .NET gRPC service into AWS ECS Fargate.
 
-This repository is tied to the post  "How to deploy a dotnet gRPC service in AWS ECS Fargate" from my blog. You can read it here //TODO
+This repository is tied to the post _"Some common gotchas when trying to deploy a dotnet gRPC app to AWS ECS"_ from my blog.    
+You can read it [here](https://www.mytechramblings.com/posts/some-gotchas-when-deploying-a-dotnet-grpc-app-to-ecs/)
 
 # Scenario 1
 
